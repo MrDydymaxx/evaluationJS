@@ -21,10 +21,21 @@ GridGenerator.prototype.generate = function () {
 				td.width='25px';
 				td.height='25px';
 				td.style.border='1px solid black';
+				td.style.backgroundColor = this.color();
 				tr.appendChild(td);
 		}
 	}
 	document.body.appendChild(table);
+}
+
+GridGenerator.prototype.color = function () {
+	var hexaTab = ['1','2','3','4','5','6','7','8','9','0','A','B','C','D','E','F'];
+	var color = "#";
+	for (var i = 0; i < 6; i++) {
+		color += hexaTab[Math.floor(Math.random()*16)];
+	}
+
+	return color;
 }
 var grid = new GridGenerator(10,10);
 grid.generate();
