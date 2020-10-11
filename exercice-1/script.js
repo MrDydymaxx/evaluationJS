@@ -12,17 +12,18 @@ var GridGenerator = function constructor(xAxis,yAxis) {
 }
 
 GridGenerator.prototype.generate = function () {
-		var table = document.createElement('table');
-		for (var i = 0; i < this.xAxis; i++) {
-			var tr = document.createElement('tr');
-			table.appendChild(tr);
-			for (var j = 0; j < this.yAxis; j++) {
-				var td = document.createElement('td');
-				td.width='25px';
-				td.height='25px';
-				td.style.border='1px solid black';
-				td.style.backgroundColor = this.color();
-				tr.appendChild(td);
+	document.body.innerHTML = '';
+	var table = document.createElement('table');
+	for (var i = 0; i < this.xAxis; i++) {
+		var tr = document.createElement('tr');
+		table.appendChild(tr);
+		for (var j = 0; j < this.yAxis; j++) {
+			var td = document.createElement('td');
+			td.width='25px';
+			td.height='25px';
+			td.style.border='1px solid black';
+			td.style.backgroundColor = this.color();
+			tr.appendChild(td);
 		}
 	}
 	document.body.appendChild(table);
@@ -38,4 +39,6 @@ GridGenerator.prototype.color = function () {
 	return color;
 }
 var grid = new GridGenerator(10,10);
-grid.generate();
+setInterval(function(){
+	grid.generate();
+}, Math.floor((Math.random()*1000)+1001));
