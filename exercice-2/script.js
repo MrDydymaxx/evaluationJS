@@ -15,4 +15,4 @@ Bar.prototype.drawBar = function () {
 }
 
 var bar = new Bar(100,79);
-bar.generate();
+bar.drawBar();
