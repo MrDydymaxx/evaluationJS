@@ -1,4 +1,9 @@
 'use scrict';
+/**
+ * @computeNotes
+ * @param {array} - list of notes
+ * @return {int} totalNotes/notes.length - the average note
+ */
 
 function computeNotes(notes) {
 	var totalNotes = 0;
