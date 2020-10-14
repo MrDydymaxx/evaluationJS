@@ -11,6 +11,11 @@ var GridGenerator = function constructor(xAxis,yAxis) {
  this.yAxis = yAxis;
 }
 
+/**
+ * generate
+ * void function
+ */
+
 GridGenerator.prototype.generate = function () {
 	document.body.innerHTML = '';
 	var table = document.createElement('table');
@@ -28,6 +33,11 @@ GridGenerator.prototype.generate = function () {
 	}
 	document.body.appendChild(table);
 }
+
+/**
+ * color
+ * return {string} color
+ */
 
 GridGenerator.prototype.color = function () {
 	var hexaTab = ['1','2','3','4','5','6','7','8','9','0','A','B','C','D','E','F'];
