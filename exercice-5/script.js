@@ -1,5 +1,11 @@
+'use strict';
 
-var MyForm = function() {
+/**
+ * @constructor
+ * void function
+ */
+
+var MyForm = function constructor() {
 	var form = document.createElement('form');
 	document.body.appendChild(form);
 	for (var i = 0; i < 5; i++) {
@@ -34,6 +40,12 @@ var MyForm = function() {
 		form.appendChild(br);
 	}
 }
+
+/**
+ * @checWForm
+ * @return {String} error - checks what's wrong with the values entered by the user
+ */
+
 function checkForm() {
 	const regexName = new RegExp('[^0-9\\.\\,\\"\\?\\!\\;\\:\\#\\$\\%\\&\\(\\)\\*\\+\\-\\/\\<\\>\\=\\@\\[\\]\\\\^\\_\\{\\}\\|\\~]+');
 	const regexMail = new RegExp('\\b[\\w\\.-]+@[\\w\\.-]+\\.\\w{2,4}\\b','gi');
