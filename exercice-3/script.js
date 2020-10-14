@@ -1,6 +1,11 @@
 'use strict';
 
-var MyMorpionXO = function() {
+/**
+ * @constructor
+ * void function
+ */
+
+var MyMorpionXO = function constructor() {
 	this.player1score = 0;
 	this.player2score = 0;
 	var player = 1;
@@ -41,6 +46,13 @@ var MyMorpionXO = function() {
 		}
 	}
 }
+
+/**
+ * @checkWin
+ * @return player1score - adds one to the current player score
+ * @return player1score - adds one to the current player score
+ */
+
 function checkWin() {
 	console.log('ok');
 	var winConditions = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
