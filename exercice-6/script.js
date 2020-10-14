@@ -1,6 +1,11 @@
 'use strict';
 
-var MyPhoneNumber = function () {
+/**
+ * @constructor
+ * void function
+ */
+
+var MyPhoneNumber = function constructor() {
 	var form = document.createElement('form');
 	document.body.appendChild(form);
 	for (var i = 0; i < 2; i++) {
@@ -23,6 +28,13 @@ var MyPhoneNumber = function () {
 		form.appendChild(br);
 	}
 }
+
+/**
+ * @checkPhoneNumber
+ * @return {String} error - returns an error
+ * @return {String} - tells if the number is valid
+ */
+
 function checkPhoneNumber() {
 	const regexPhone = new RegExp("(\\(\\+33\\)|0|\\+33|0033)[1-9]([0-9]{8}|([0-9\\- ]){12})",'g');
 	var error;
