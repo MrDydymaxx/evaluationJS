@@ -1,9 +1,9 @@
 'use strict';
 
 /**
- * constructor
- * {number} xAxis
- * {number} yAxis
+ * @constructor
+ * @param {number} xAxis - number of columns
+ * @param {number} yAxis - number of rows
  */
 
 var GridGenerator = function constructor(xAxis,yAxis) {
@@ -12,7 +12,7 @@ var GridGenerator = function constructor(xAxis,yAxis) {
 }
 
 /**
- * generate
+ * @generate
  * void function
  */
 
@@ -35,8 +35,8 @@ GridGenerator.prototype.generate = function () {
 }
 
 /**
- * color
- * return {string} color
+ * @color
+ * @return {string} color
  */
 
 GridGenerator.prototype.color = function () {
