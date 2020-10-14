@@ -16,6 +16,26 @@ var MyMorpionXO = function() {
 			td.height='250px';
 			td.style.border='1px solid black';
 			td.id = countID++;
+			td.addEventListener('click',function(event) {
+				if(!event.target.src) {
+					if(player == 1) {
+					var imgLink = 'cross.png';
+					var value = player;
+					player = 2;
+				} else {
+					var imgLink = 'circle.png';
+					var value = player;
+					player = 1;
+				}
+				var td = document.getElementById(event.target.id);
+				var img = document.createElement('img');
+				img.style.width='100%';
+				img.style.height='100%';
+				img.src=imgLink;
+				td.appendChild(img);
+				td.setAttribute('value',value);
+				}
+			});
 			tr.appendChild(td);
 		}
 	}
