@@ -49,8 +49,8 @@ var MyMorpionXO = function constructor() {
 
 /**
  * @checkWin
- * @return player1score - adds one to the current player score
- * @return player1score - adds one to the current player score
+ * @return {int} player1score - adds one to the current player score
+ * @return {int} player1score - adds one to the current player score
  */
 
 function checkWin() {
