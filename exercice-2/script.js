@@ -14,5 +14,5 @@ Bar.prototype.drawBar = function () {
 	document.body.appendChild(progress);
 }
 
-var bar = new Bar(100,79);
+var bar = new Bar(100,Math.floor(Math.random()*101));
 bar.drawBar();
