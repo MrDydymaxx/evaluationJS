@@ -2,7 +2,13 @@
 
 var win = [2,3,4,5,5];
 var titles = ['Torpilleur','Contre-torpilleur','Croiseur','Porte-avion','Cuirasse'];
-var MySeaBattle = function() {
+
+/**
+ * @constructor
+ * void function
+ */
+
+var MySeaBattle = function constructor() {
 	this.world = [[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 0, 2, 2, 2, 0, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],[0, 3, 3, 3, 3, 0, 0, 0, 0, 0, 4, 0],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 0],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],[0, 0, 0, 0, 0, 5, 5, 5, 5, 5, 0, 0],[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]];
 }
 
@@ -82,6 +88,12 @@ MySeaBattle.prototype.generate = function() {
 	}
 
 }
+
+/**
+ * @checkWin
+ * @param {String} value - value of the boat hit
+ */
+
 function checkWin(value) {
 	switch(value) {
 		case 'Torpilleur':
